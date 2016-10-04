@@ -1,0 +1,782 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+rosado = #EC6060
+rosado-oscuro = #EA5455
+rosado-claro = #FF525F
+blanco = #fff
+azul = #404875
+azul-rgba = rgba(38,47,79,0.8)
+plomo = #666
+cyan = #00AEC1
+cyan-oscuro = #0097a8
+negro-rgba = rgba(0, 0, 0, 0.7)
+color-github = #333
+color-facebook = #3b5999
+color-google = #dd4b39
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+body
+	font-family 'Roboto', sans-serif;
+center-x()
+	position absolute
+	left 50%
+	-webkit-transform translateX(-50%)
+	transform translateX(-50%)
+center-y()
+	position absolute
+	top 50%
+	-webkit-transform translateY(-50%)
+	transform translateY(-50%)
+center-x-and-center-y()
+	position absolute
+	left 50%
+	top: 50%
+	-webkit-transform translateX(-50%) translateY(-50%)
+	transform translateX(-50%) translateY(-50%)
+basic-properties-screen()
+	width 100%
+	height 500px
+	position relative
+	left 0
+	top 0
+basic-properties-content-screen()
+	width 220px
+	height 300px
+	font-size 1.1em
+	font-weight 300
+	text-align center
+properties-icons()
+	font-size 5.2em
+	bottom 0px
+reverse-incline-content(position)
+	position position
+	left 50%
+	top 50%
+	-webkit-transform translateX(-50%) translateY(-50%) skewY(8deg)
+	transform translateX(-50%) translateY(-50%) skewY(8deg)
+feature-btn(color)
+	text-decoration none
+	width 200px
+	color color
+	font-size 17px
+	font-weight 300
+	text-align center
+	border 1px solid color
+	padding 10px 0
+enjoy-screen-icons()
+	font-size 4em
+	center-x()
+	bottom 20px
+place-skewY()
+	-webkit-transform skewY(-8deg)
+	transform skewY(-8deg)
+remove-skewY()
+	-webkit-transform skewY(8deg)
+	transform skewY(8deg)
+encourage-content(name)
+	@keyframes name
+		10%
+			left -50%
+		40%
+			left -10%
+		70%
+			left 20%
+		100%
+			left 50%
+prefix-encourage-content(prefix)	
+	@-prefix-keyframes name
+		10%
+			left -50%
+		40%
+			left -10%
+		70%
+			left 20%
+		100%
+			left 50%
+corners()
+	content ''
+	width 30px
+	height 30px
+	background-color transparent
+	position absolute
+shadow()
+	background-color negro-rgba
+	width 100%
+	height 100vh
+	position fixed
+	left 0
+	top 0
+	cursor pointer
+btn-login-social(background,color)
+	display block
+	width 100%
+	line-height 40px
+	background-color background
+	color color
+	font-weight 300
+	text-align center
+	position absolute
+	left 0
+.menu-for-mobile
+	width 100%
+	height 55px
+	background-color transparent
+	color blanco
+	border-bottom 2px dashed blanco
+	// cambiar a position absolute cuando el usuario esta despues de la primera pantalla
+	position fixed
+	left 0
+	top 0
+	z-index 3
+	h1
+		font-size 2em
+		font-family 'Lobster', cursive
+		center-x-and-center-y()
+	.icon-menu2
+		font-size 1.9em 
+		color blanco !important
+		center-y()
+		left 12px
+		cursor pointer
+	nav
+		display none
+.screen-logo-and-slogan
+	width 100%
+	height 100vh
+	background-image url(../img/fondo.jpg)
+	background-size cover
+	background-position center top
+	background-attachment fixed
+	color blanco
+	position relative
+	left 0
+	top 0
+	z-index 1
+	.shade-screen-logo-and-slogan
+		width 100%
+		height 100vh
+		background-color azul-rgba
+		position relative
+		left 0
+		top 0
+		z-index 2
+		.short-slogan
+			width 90%
+			max-width 700px
+			display flex
+			flex-wrap wrap
+			justify-content center
+			font-size 1.6em
+			font-weight 400
+			center-x()
+			top 35%
+			position fixed
+			p 
+				width 100%
+				text-align center
+			.animated-word-list
+				width 100%
+				height 32px
+				text-align center
+				overflow hidden
+				ul 
+					list-style: none
+					li 
+						display block
+						line-height 32px
+						position relative
+						top  0
+						-webkit-animation 2s types-of-developers infinite linear
+						animation 2s types-of-developers infinite linear
+					@-webkit-keyframes types-of-developers
+						10%, 40%
+							top 0px
+						50%, 90%
+							top -32px	
+					@keyframes types-of-developers
+						10%, 40%
+							top 0px
+						50%, 90%
+							top -32px				
+		a 
+			feature-btn(blanco)
+			center-x()
+			position fixed
+			top 70%
+.screen-values-your-talent
+	background-color blanco
+	color plomo
+	basic-properties-screen()
+	z-index 4
+	.values-your-talent 
+		basic-properties-content-screen()
+		center-x-and-center-y()
+		left -50%
+		p:nth-of-type(1)
+			color rosado-claro
+			font-weight 500
+		.icon-ruby
+			center-x()
+			properties-icons()
+		-webkit-animation appear-values-your-talent 0.7s linear 1 forwards paused	
+		animation appear-values-your-talent 0.7s linear 1 forwards paused
+	prefix-encourage-content(-webkit-)
+	encourage-content(appear-values-your-talent)
+.screen-widolab-is
+	background-color rosado-claro
+	color blanco
+	basic-properties-screen()
+	-webkit-transform skewY(-8deg)
+	transform skewY(-8deg)
+	z-index 5
+	.widolab-is 
+		basic-properties-content-screen()
+		center-x-and-center-y()
+		reverse-incline-content(absolute)
+		left -50%
+		.icon-globe
+			center-x()
+			properties-icons()
+		-webkit-animation appear-widolab-is 0.7s linear 1 forwards paused
+		animation appear-widolab-is 0.7s linear 1 forwards paused
+	prefix-encourage-content(-webkit-)	
+	encourage-content(appear-widolab-is)
+	
+.screen-how-do-we-do-it
+	background-color blanco
+	color plomo
+	basic-properties-screen()
+	place-skewY()
+	z-index 6
+	.how-do-we-do-it
+		basic-properties-content-screen()
+		center-x-and-center-y()
+		reverse-incline-content(absolute)
+		left -50%
+		p:nth-of-type(1)
+			color rosado-claro
+			font-weight 500
+			margin-bottom 40px
+		a 
+			feature-btn(plomo)
+			center-x()
+			bottom 0
+		-webkit-animation appear-how-do-we-do-it 0.7s linear 1 forwards paused	
+		animation appear-how-do-we-do-it 0.7s linear 1 forwards paused
+	prefix-encourage-content(-webkit-)	
+	encourage-content(appear-how-do-we-do-it)
+.screen-benefits-of-using-widolab
+	background-color rosado-claro
+	color blanco
+	basic-properties-screen()
+	height auto
+	padding-top 300px
+	place-skewY()
+	z-index 7
+	> p
+		width 100%
+		font-size 1.1em
+		font-weight 500
+		text-align center
+		reverse-incline-content(absolute)
+		top 100px
+	.benefits-container
+		display flex 
+		flex-wrap wrap
+		justify-content center
+		div 
+			display block
+			height 300px
+			font-size 1.1em
+			font-weight 300
+			text-align center	
+			padding 0 15px	
+			margin 60px 0
+			reverse-incline-content(relative)
+			border-bottom 2px dashed blanco
+			a 
+				feature-btn(blanco)
+				center-x()
+				bottom 50px
+		.invites-a-developer
+			border-bottom none
+			margin-bottom -100px
+		-webkit-animation appear-benefit-container 0.7s linear 1 forwards paused
+		animation appear-benefit-container 0.7s linear 1 forwards paused
+	prefix-encourage-content(-webkit-)
+	encourage-content(appear-benefit-container)
+.screen-enjoy-every-day
+	background-color blanco
+	color plomo
+	basic-properties-screen()
+	height auto
+	padding-top 100px
+	place-skewY()
+	z-index 8
+	> p 
+		width 100%
+		font-size 1.1em
+		font-weight 400
+		text-align center
+		padding 0 10px
+		remove-skewY()
+		margin-bottom 100px
+	.enjoy-container
+		display flex
+		flex-wrap wrap
+		justify-content center
+		.qualify, .recommend, .friendships
+			//basic-properties-content-screen()
+			width 100%
+			font-size 1.1em
+			font-weight 300
+			text-align center	
+			height 200px
+			reverse-incline-content(relative)
+			padding 30px 15px
+			margin 70px auto
+		.qualify
+			.qualify-icons
+				width 240px
+				height 4em
+				center-x()
+				bottom 20px
+				span 
+					font-size 4em
+					margin 0 20px
+		.recommend
+			height 360px
+			padding 80px 15px
+			border-top 2px dashed rosado-claro
+			border-bottom 2px dashed rosado-claro
+			.icon-star
+				enjoy-screen-icons()
+				bottom 80px
+		.friendships
+			height 300px
+			margin-top -40px
+			margin-bottom -60px
+			.icon-lock2
+				enjoy-screen-icons()
+		-webkit-animation appear-enjoy-container 0.7s linear 1 forwards paused	
+		animation appear-enjoy-container 0.7s linear 1 forwards paused
+	prefix-encourage-content(-webkit-)
+	encourage-content(appear-enjoy-container)
+.screen-mail-only
+	background-color rosado-claro
+	color blanco
+	basic-properties-screen()
+	height 580px
+	place-skewY()
+	z-index 9
+	.mail-only 
+		basic-properties-content-screen()
+		font-size 1.04em
+		height 460px
+		padding-top 20px
+		reverse-incline-content(relative)
+		left -50%
+		p 
+			margin 20px 0
+		.input-correo
+			display block
+			border none
+			width 200px
+			height 45px
+			font-size 1em
+			color plomo
+			font-weight 300
+			border-radius 0.1em
+			box-shadow 0px 0px 1px 2px rgba(0, 0, 0, .15) inset
+			padding-left 20px
+			center-x()
+			bottom 90px
+		.btn-warn
+			feature-btn(blanco)
+			center-x()
+			bottom 25px
+		-webkit-animation appear-mail-only 0.7s linear 1 forwards paused
+		animation appear-mail-only 0.7s linear 1 forwards paused
+	prefix-encourage-content(-webkit-)
+	encourage-content(appear-mail-only)
+.piece-to-form-a-triangle
+	background-color blanco
+	basic-properties-screen()
+	height 100px
+	remove-skewY()
+	z-index 10
+	p 
+		display none
+footer
+	background-color azul
+	basic-properties-screen()
+	height 220px
+	color blanco
+	z-index 11
+	.social-networks
+		width 100%
+		text-align center
+		position absolute
+		top 40px
+		a 
+			text-decoration none
+			color blanco
+			font-size 1.7em
+			margin 0 40px
+	p:nth-of-type(1), p:nth-of-type(2)
+		basic-properties-content-screen(absolute)
+		width 100%
+		height auto
+		font-size 1.05em
+		text-align center
+		padding 0 10px
+		center-x()
+	p:nth-of-type(1)
+		top 90px
+		.icon-heart-fill-o
+			color rosado-claro
+			font-size 1.2em
+	p:nth-of-type(2)
+		top 170px
+	
+.shadow-dropdown-menu
+	shadow()
+	left -100%
+	z-index 12
+.menu-displayed
+	width 250px
+	height 100vh
+	background-color azul
+	color blanco
+	position fixed
+	left -300px
+	top 0
+	z-index 13
+	p 
+		position absolute
+		right 30px
+		top 30px
+		font-size 1.3em
+		font-weight 300
+		cursor pointer
+		.icon-close-o
+			position relative
+			top 2px
+	nav 
+		width 100%
+		height auto
+		position relative
+		top 100px
+		left 0
+		ul 
+			list-style none
+			li 
+				a 
+					text-decoration none
+					color blanco
+					display block
+					font-size 1.1em
+					font-weight 300
+					padding-left 40px
+					line-height 50px
+					&:hover
+						background-color rosado-claro
+.modal-login
+	display none
+	
+@media screen and (min-width: 500px) 
+	.values-your-talent, .widolab-is, .how-do-we-do-it, .mail-only
+		width 350px !important
+	.values-your-talent
+		p:nth-of-type(2)
+			margin-top 30px
+	.widolab-is
+		p 
+			margin-top 50px
+	.how-do-we-do-it
+		p:nth-of-type(1)
+			font-size 1.3em
+			margin-top 30px
+	.screen-benefits-of-using-widolab
+		.benefits-container
+			div
+				padding 0 80px	
+			.invites-a-developer
+				a 
+					bottom 80px
+	.screen-enjoy-every-day
+		> div
+			padding 30px 80px !important
+	.mail-only	
+		padding-top 80px !important
+		.input-correo
+			width 300px !important
+			bottom 120px !important
+		.btn-warn
+			bottom 50px !important
+	.piece-to-form-a-triangle
+		height 150px
+	footer
+		.social-networks
+			top 50px
+			a
+				font-size 1.9em
+		p:nth-of-type(1)
+			top 120px
+@media screen and (max-width: 1000px)
+	.sentence-summary
+		display none	
+@media screen and (min-width: 1000px)
+	.menu-for-mobile
+		height 70px
+		h1
+			font-size 2.3em
+		.icon-menu2
+			font-size 2.1em
+			left 30px	
+		nav
+			display block
+			width auto
+			height auto
+			center-y()
+			right 50px
+			ul 
+				list-style none
+				li 
+					display inline-block
+					a 
+						text-decoration none
+						display inline-block
+						color blanco
+						font-size 1.25em
+						font-weight 300
+						margin 0 30px
+	.shade-screen-logo-and-slogan
+		.short-slogan
+			min-width 100% 
+			max-width 100%
+			font-size 2.5em !important
+			p, .animated-word-list
+				margin 0 10px
+			p 
+				width auto !important
+			.animated-word-list
+				width auto !important
+				height 48px !important
+				ul 
+					li 
+						display inline-block
+						line-height 48px !important
+					@-webkit-keyframes types-of-developers
+						10%, 40%
+							top 0px
+						50%, 90%
+							top -48px	
+					@keyframes types-of-developers
+						10%, 40%
+							top 0px
+						50%, 90%
+							top -48px
+		.sentence-summary
+			display block
+			width 950px
+			font-size 1.3em
+			font-weight 300
+			text-align center
+			center-x()
+			position fixed
+			top 60%
+		a 
+			width 270px !important
+			font-size 20px !important
+			top 80% !important
+	.values-your-talent
+		height 350px !important
+		p:nth-of-type(1)
+			font-size 1.3em
+		p:nth-of-type(2)
+			font-size 1.2em
+	.widolab-is 
+		height 320px !important
+		p 
+			font-size 1.2em
+	.how-do-we-do-it
+		p:nth-of-type(2)
+			font-size 1.2em
+		a 
+			width 240px !important
+			font-size 19px !important
+	.screen-benefits-of-using-widolab
+		height auto
+		padding-top 400px
+		padding-bottom 100px
+		> p 
+			font-size 1.5em
+		.benefits-container
+			transform none
+			width auto
+			height 300px
+			position relative
+			left -50%
+			top -100px
+			-webkit-transform translateX(-50%) skewY(8deg)
+			transform translateX(-50%) skewY(8deg)
+			div 
+				width 260px
+				border-bottom none
+				border 1px solid blanco !important
+				padding 30px 20px
+				position relative
+				top 0
+				left 0
+				-webkit-transform none
+				transform none
+				margin 0 60px
+				a 
+					bottom 20px
+			.invites-a-developer
+				a
+					bottom 20px !important
+	.screen-enjoy-every-day
+		height 600px
+		> p 
+			font-size 1.6em
+			position relative
+			top 30px 
+		.enjoy-container
+			width auto
+			height 280px
+			reverse-incline-content(relative)
+			top 130px
+			left -50%
+			> div 
+				width 260px !important
+				margin 0 40px !important
+				position relative !important
+				left 0 !important
+				top 50%
+				-webkit-transform translateY(-50%) !important
+				transform translateY(-50%) !important
+			.qualify
+				margin 0	
+				padding 0
+				.qualify-icons
+					bottom 40px
+			.recommend
+				margin 0
+				padding 0
+				height 200px
+				border none
+				.icon-star
+					bottom 0
+			.friendships
+				margin 0
+				padding 0
+				height 240px 
+				.icon-lock2
+					bottom 0
+	.screen-mail-only
+		.mail-only
+			width 550px !important
+	.piece-to-form-a-triangle
+		height 250px
+		p 
+			display block
+			width 600px
+			background-color azul
+			color blanco
+			font-size 1.5em
+			font-weight 300
+			text-align center
+			padding 10px 0
+			position absolute
+			left 50%
+			top 50%
+			transform translateX(-50%) translateY(-50%) skewY(-8deg)
+			&:before 
+				border-left 4px solid azul
+				border-top 4px solid azul
+				corners()
+				left -15px
+				top -15px
+			&:after
+				border-right 4px solid azul
+				border-bottom 4px solid azul
+				corners()
+				right -15px
+				bottom -15px
+	.menu-displayed
+		width 300px
+	.modal-login
+		display none
+		shadow()
+		z-index 13
+		-webkit-animation appear-modal-enter .5s ease 1 forwards
+		animation appear-modal-enter .5s ease 1 forwards
+		@-webkit-keyframes appear-modal-enter
+			0%
+				opacity 0
+			100%
+				opacity 1
+		@keyframes appear-modal-enter
+			0%
+				opacity 0
+			100%
+				opacity 1
+		.login 
+			width 340px
+			height 500px
+			background-color blanco
+			center-x-and-center-y()
+			position relative
+			z-index 14
+			.login-container
+				outline 1px solid red
+				width 280px
+				height 400px
+				center-x-and-center-y()
+				z-index 15
+				> a 
+					text-decoration none
+					span 
+						//left 20px
+						//line-height 20px
+						font-size 1.1em
+						position absolute
+						left 30px
+						top 50%
+						transform translateY(-50%)
+				.login-github
+					btn-login-social(color-github,blanco)
+					top 0
+				.login-facebook
+					btn-login-social(color-facebook,blanco)
+					top 60px
+				.login-google
+					btn-login-social(color-google,blanco)
+					top 120px
+
+@media screen and (min-width: 1000px) and (max-width: 1200px)
+	.screen-benefits-of-using-widolab
+		.benefits-container
+			div
+				margin 0 30px
+	.screen-enjoy-every-day
+		.enjoy-container
+			.qualify
+				margin 0 70px !important
+			.recommend
+				margin 0 70px !important
+			.friendships
+				display none
+				
+				
+				
+		
+		
+				
+		
+			
+
